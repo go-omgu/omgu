@@ -82,7 +82,7 @@ func (p *Progress) Run(title string) error {
 			select {
 			case <-p.ctx.Done():
 				break
-			case <-time.Tick(d):
+			case <-time.After(d):
 				p.Lock()
 				p.print()
 				p.Unlock()

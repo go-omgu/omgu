@@ -13,6 +13,10 @@ func parseIntRange(s string) ([]int, error) {
 	}
 
 	end, err := strconv.Atoi(arr[1])
+	if err != nil {
+		return nil, err
+	}
+
 	if start > end {
 		start, end = end, start
 	}

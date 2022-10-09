@@ -37,5 +37,4 @@ func TestScanner(t *testing.T) {
 	if count != 2 {
 		t.Fatal(count)
 	}
-	count = 0
 }

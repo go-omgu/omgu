@@ -10,5 +10,5 @@ func TestShowBanner(t *testing.T) {
 	// b.Author = "xbol0"
 	// b.Email = "xbolo@duck.com"
 	b.Link = "https://github.com/go-omgu/omgu"
-	b.ShowBanner()
+	_ = b.ShowBanner()
 }
