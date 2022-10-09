@@ -22,6 +22,8 @@ type Progress struct {
 	*sync.Mutex
 }
 
+const CLEAR_LINE = "\r\x1b[2K"
+
 func NewProgress(max int) *Progress {
 	p := new(Progress)
 	p.max = max
@@ -92,7 +94,7 @@ func (p *Progress) Run(title string) error {
 }
 
 func (p *Progress) print() {
-	fmt.Fprintf(os.Stderr, "\r\x1b[2K[%v/%v] - %v%% %s", p.current, p.max,
+	fmt.Fprintf(os.Stderr, "%s[%v/%v] - %v%% %s", CLEAR_LINE, p.current, p.max,
 		p.current*100/p.max, p.title)
 }
 
@@ -130,7 +132,7 @@ func (p *Progress) Finish() error {
 		ops = int64(p.current) / uss
 	}
 
-	fmt.Fprintf(os.Stderr, "\r\x1b[2KDone, used %s, %v op/s.\n", used, ops)
+	fmt.Fprintf(os.Stderr, "%sDone, used %s, %v op/s.\n", CLEAR_LINE, used, ops)
 	return nil
 }
 
