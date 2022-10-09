@@ -10,5 +10,5 @@ func TestFlags(t *testing.T) {
 	flag.Parse()
 	g := &FlagSection{Name: "general", Flags: []string{"n"}}
 	g2 := &FlagSection{Name: "scan", Flags: []string{"n"}}
-	PrintHelp([]*FlagSection{g, g2})
+	_ = PrintHelp([]*FlagSection{g, g2})
 }

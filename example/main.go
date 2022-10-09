@@ -24,11 +24,11 @@ func main() {
 		VerFunc:     banner.VFConstant("1.0"),
 	}
 
-	b.ShowBanner()
+	_ = b.ShowBanner()
 
 	// Flags
 	opts := parseFlags()
-	flags.PrintAll()
+	_ = flags.PrintAll()
 	fmt.Printf("count=%v\n", opts.count)
 	fmt.Printf("Ports=%v\n", *opts.ports)
 }
