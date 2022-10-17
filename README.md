@@ -14,8 +14,4 @@ Lightweight library works on cli for golang.
   - [x] CSV
   - [x] Human-readable JSON or Grepable JSON*
 - [x] Stream reader
-- [ ] Database and Cache (ref:https://github.com/projectdiscovery/hmap)
-- [ ] Utils
-  - [ ] Slice util (ref:https://github.com/projectdiscovery/sliceutil/blob/main/sliceutil.go)
-  - [ ] Strings util (ref:https://github.com/projectdiscovery/stringsutil)
-  - [x] FS util
+- [x] FS util
